@@ -84,10 +84,10 @@ module.exports = {
       {'overrides': {'=': 'after'}},
     ],
     'eqeqeq':      [error, 'always', {'null': 'ignore'}], // 比較は===,!==を強制
-    'import/order':[ error, {
+    'import/order':[ error, { // importの順番
       alphabetize:       {order: 'asc'},
       'newlines-between':'always',
-      groups:            [ 'builtin', 'external', 'index', 'parent', 'sibling', 'type' ], // 順序
+      groups:            ["index", "sibling", "parent", "internal", "external", "builtin", "object", "type"], // 順序
       pathGroups:        [
         {
           pattern: '@app/**',
